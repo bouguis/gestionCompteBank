@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="resources/image/png" sizes="16x16" href="resources/images/favicon.png">
-    <title>Ela - Bootstrap Admin Dashboard Template</title>
+    <title>Géstion Comptes Bancaires</title>
     <!-- Bootstrap Core CSS -->
     <link href="resources/css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -24,7 +24,7 @@
 <![endif]-->
 </head>
 
-<body class="fix-header fix-sidebar">
+<body class="fix-header fix-sidebar" style="background-image: url('resources/images/bk.jpeg')">
     <!-- Preloader - style you can find in spinners.css -->
     <div class="preloader">
         <svg class="circular" viewBox="25 25 50 50">

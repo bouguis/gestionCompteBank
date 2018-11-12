@@ -87,11 +87,17 @@
   outline: none;
 }
 body {
-  background: #fff;
+  background-image:linear-gradient(green, yellow,red );
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   overflow-x: hidden;
   color: #67757c;
+  background-repeat: no-repeat ;
+  background-size: 100%;
+  
+ 
+}
+  
 }
 html {
   position: relative;
