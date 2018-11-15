@@ -9,4 +9,6 @@ public class IDaoClientImpl extends AbstractGeneriqueIDaoImpl<Client, Long> impl
 		// TODO Auto-generated constructor stub
 	}
 
+	
+
 }
