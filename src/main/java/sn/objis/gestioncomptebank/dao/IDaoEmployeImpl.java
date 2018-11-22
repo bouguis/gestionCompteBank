@@ -14,8 +14,10 @@ public class IDaoEmployeImpl extends AbstractGeneriqueIDaoImpl<Employe, Long> im
 
 	@Override
 	public List<Employe> employeByGroup(long codeGrp) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Employe> employes = null;
+		Groupe gr = em.find(Groupe.class, codeGrp);
+		employes = gr.getEmployes();
+		return employes;
 	}
 
 	@Override

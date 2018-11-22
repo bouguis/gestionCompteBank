@@ -57,7 +57,7 @@ public class IServiceEmployeImpl implements IServiceEmploye {
 	 */
 	@Override
 	public List<Employe> getAll() {
-		
+	
 		return dao.getAll();
 	}
 
@@ -65,6 +65,18 @@ public class IServiceEmployeImpl implements IServiceEmploye {
 	public Employe addEmpl(Employe t, Long codeSup) {
 		dao.addEmpl(t, codeSup);
 		return t;
+	}
+
+	@Override
+	public List<Employe> employeByGroup(long codeGrp) {
+		
+		return dao.employeByGroup(codeGrp);
+	}
+
+	@Override
+	public void addEmpToGrp(long codeEmp, long codeGrp) {
+		dao.addEmpToGrp(codeEmp, codeGrp);
+		
 	}
 
 }
