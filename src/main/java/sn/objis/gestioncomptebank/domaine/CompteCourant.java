@@ -31,7 +31,7 @@ public class CompteCourant extends Compte implements Serializable {
 		this.decouvert = decouvert;
 	}
 
-	public CompteCourant(String numCompte, Date dateCreation, double solde, Double decouvert) {
+	public CompteCourant(String numCompte, Date dateCreation, double solde, double decouvert) {
 		super(numCompte, dateCreation, solde);
 		this.decouvert = decouvert;
 	}
