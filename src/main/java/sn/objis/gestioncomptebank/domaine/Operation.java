@@ -32,6 +32,8 @@ public abstract class Operation implements Serializable {
 	@ManyToOne
 	@JoinColumn(name="CODE_EMPL")
 	private Employe employe;
+	private Compte cmpt;
+	
 	
 
 	public Operation() {
@@ -76,6 +78,14 @@ public abstract class Operation implements Serializable {
 
 	public void setEmploye(Employe employe) {
 		this.employe = employe;
+	}
+
+	public Compte getCmpt() {
+		return cmpt;
+	}
+
+	public void setCmpt(Compte cmpt) {
+		this.cmpt = cmpt;
 	}
 	
    

@@ -8,7 +8,9 @@ public interface IDaoCompte extends IDao<Compte, Long>{
 	
 	public List<Compte> compteByClient(long codeClient);
 	
-	public List<Compte> compteByEmp(long codeEmp);
+	public Compte addCompte(Compte cmpt, long codeClient, long codeEmploye);
+	
+	public Compte consulterCompte(String numCompte);
 	
 	
 

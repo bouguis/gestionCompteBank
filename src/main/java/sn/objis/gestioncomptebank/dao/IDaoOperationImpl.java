@@ -1,11 +1,13 @@
 package sn.objis.gestioncomptebank.dao;
 
 import java.util.List;
+import sn.objis.gestioncomptebank.domaine.Compte;
+import sn.objis.gestioncomptebank.domaine.Employe;
 import sn.objis.gestioncomptebank.domaine.Operation;
-import sn.objis.gestioncomptebank.domaine.Retrait;
-import sn.objis.gestioncomptebank.domaine.Versement;
 
 public class IDaoOperationImpl extends AbstractGeneriqueIDaoImpl<Operation, Long> implements IDaoOperation{
+	
+	IDaoCompteImpl comptDao = null;
 
 	public IDaoOperationImpl() {
 		super(Operation.class);
@@ -14,29 +16,21 @@ public class IDaoOperationImpl extends AbstractGeneriqueIDaoImpl<Operation, Long
 
 	@Override
 	public List<Operation> operationByCompte(long codeCompte) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Operation> operations = null;
+		Compte cmpt = em.find(Compte.class, codeCompte);
+		operations = cmpt.getOperations();
+		return operations;
 	}
 
 	@Override
-	public void retirer(Retrait retrait) {
-		// TODO Auto-generated method stub
-		em.persist(retrait);
+	public Operation addOperation(Operation op, String numcmpt, long codeEmp) {
+		Compte cmpt = comptDao.consulterCompte(numcmpt);
+		Employe emp = em.find(Employe.class, codeEmp);
+		op.setCmpt(cmpt);
+		op.setEmploye(emp);
+		em.persist(op);
+		return op;
 	}
 
-	@Override
-	public void versement(Versement versement) {
-		// TODO Auto-generated method stub
-		em.persist(versement);
-	}
-
-	@Override
-	public void virement(Retrait retrait, Versement versement) {
-		// TODO Auto-generated method stub
-		em.persist(retrait);
-		em.persist(versement);
-	}
-
-	
 
 }

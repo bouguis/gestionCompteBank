@@ -27,6 +27,7 @@ public class IDaoEmployeImpl extends AbstractGeneriqueIDaoImpl<Employe, Long> im
 		listeEmpToGroupe =(List<Employe>) query.getResultList();
 		tx.commit();
 		return listeEmpToGroupe ;
+
 	}
 
 	@Override

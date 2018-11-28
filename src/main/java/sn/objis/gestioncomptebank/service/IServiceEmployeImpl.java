@@ -57,7 +57,7 @@ public class IServiceEmployeImpl implements IServiceEmploye {
 	 */
 	@Override
 	public List<Employe> getAll() {
-		
+	
 		return dao.getAll();
 	}
 
@@ -71,6 +71,7 @@ public class IServiceEmployeImpl implements IServiceEmploye {
 	public List<Employe> findAll() {
 		// TODO Auto-generated method stub
 		return dao.findAll();
+
 	}
 
 	@Override
@@ -79,10 +80,12 @@ public class IServiceEmployeImpl implements IServiceEmploye {
 		
 	}
 
+
 	@Override
 	public List<Employe> employeByGroup(long codeGrp) {
 		
 		return dao.employeByGroup(codeGrp);
 	}
+
 
 }
