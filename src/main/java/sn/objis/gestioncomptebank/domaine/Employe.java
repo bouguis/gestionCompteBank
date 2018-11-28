@@ -33,6 +33,13 @@ public class Employe implements Serializable {
 		super();
 	}
 	
+	
+	public Employe(long codeEmploye) {
+		super();
+		this.codeEmploye = codeEmploye;
+	}
+
+
 	public long getCodeEmploye() {
 		return codeEmploye;
 	}
@@ -62,6 +69,12 @@ public class Employe implements Serializable {
 		this.codeEmploye = codeEmploye;
 		this.nomEmloye = nomEmloye;
 	}
+
+	public Employe(String nomEmloye) {
+		super();
+		this.nomEmloye = nomEmloye;
+	}
+	
 	
 	
    

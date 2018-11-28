@@ -46,11 +46,11 @@ public class Login extends HttpServlet {
 			request.login(login, password);
 			//Redirection vers les spaces dde travails
 			if (request.isUserInRole(roles.admin.toString())) {
-				rd = request.getRequestDispatcher("admin/admin.jsp");
-				rd.forward(request, response);
+			
+				response.sendRedirect(response.encodeRedirectURL(request.getContextPath() + "/admin"));
+			
 			}else {
-				rd = request.getRequestDispatcher("employe/employe.jsp");
-				rd.forward(request, response);
+				response.sendRedirect(response.encodeRedirectURL(request.getContextPath() + "/user"));
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

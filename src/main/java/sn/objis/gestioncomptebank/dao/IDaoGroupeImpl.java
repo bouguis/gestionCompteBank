@@ -6,14 +6,12 @@ public class IDaoGroupeImpl extends AbstractGeneriqueIDaoImpl<Groupe, Long> impl
 
 	public IDaoGroupeImpl() {
 		super(Groupe.class);
-		// TODO Auto-generated constructor stub
+		
 	}
 
-	@Override
-	public Groupe add(Groupe t) {
-		// TODO Auto-generated method stub
-		return super.add(t);
-	}
+	
+
+	
 	
 
 }

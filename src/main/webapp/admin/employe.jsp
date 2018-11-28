@@ -332,79 +332,143 @@
             <!-- Container fluid  -->
             <div class="container-fluid">
                 <!-- Start Page Content -->
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="card bg-primary p-20">
-                            <div class="media widget-ten">
-                                <div class="media-left meida media-middle">
-                                    <span><i class="fa fa-users f-s-40"></i></span>
-                                </div>
-                                <div class="media-body media-text-right">
-                                    <h2 class="color-white"><c:out value="${ NombreEmp }"/></h2>
-                                    <p class="m-b-0">Nombre Employes</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card bg-pink p-20">
-                            <div class="media widget-ten">
-                                <div class="media-left meida media-middle">
-                                    <span><i class="ti-comment f-s-40"></i></span>
-                                </div>
-                                <div class="media-body media-text-right">
-                                    <h2 class="color-white">278</h2>
-                                    <p class="m-b-0">New Comment</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card bg-success p-20">
-                            <div class="media widget-ten">
-                                <div class="media-left meida media-middle">
-                                    <span><i class="ti-vector f-s-40"></i></span>
-                                </div>
-                                <div class="media-body media-text-right">
-                                    <h2 class="color-white">$27647</h2>
-                                    <p class="m-b-0">Bounce Rate</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card bg-danger p-20">
-                            <div class="media widget-ten">
-                                <div class="media-left meida media-middle">
-                                    <span><i class="ti-location-pin f-s-40"></i></span>
-                                </div>
-                                <div class="media-body media-text-right">
-                                    <h2 class="color-white">278</h2>
-                                    <p class="m-b-0">Total Visitor</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
 
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-6">
                         <div class="card">
-                           
+                           <div class="card card-outline-primary">
+                            <div class="card-header">
+                                <h4 class="m-b-0 text-white">Ajout Employé</h4>
+                            </div>
+                            <div class="card-body">
+                                <form method="post" action="employe">
+                                    <div class="form-body">
+                                        <h3 class="card-title m-t-15"></h3>
+                                        <hr>
+                                        <div class="row p-t-20">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Nom et Prénom</label>
+                                                    <input type="text" name="nomprenom" id="firstName" class="form-control" placeholder="Bouna Diawara">
+                                                     </div>
+                                            </div>
+                                            <!--/span-->
+                                            
+                                            <!--/span-->
+                                        </div>
+                                        <!--/row-->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group has-success">
+                                                    <label class="control-label">Employer Sup</label>
+<!--                                                     <select name="code" class="form-control custom-select"> -->
+<!--                                                         <option value="1">1</option> -->
+<!--                                                         <option value="2">2</option> -->
+<!--                                                     </select> -->
+                                                           <input type="text" name="code"  class="form-control" placeholder="Employe Sup">
+                                                     </div>
+                                            </div>
+                                            <!--/span-->
+                                           
+                                            <!--/span-->
+                                        </div>
+                                        <!--/row-->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+<!--                                                     <label class="control-label">Groupe</label> -->
+<!--                                                     <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1"> -->
+<!--                                                         <option value="Category 1">Category 1</option> -->
+<!--                                                         <option value="Category 2">Category 2</option> -->
+<!--                                                         <option value="Category 3">Category 5</option> -->
+<!--                                                         <option value="Category 4">Category 4</option> -->
+<!--                                                     </select> -->
+<!--                                                          <input type="text" name="groupe"  class="form-control" placeholder="Groupe"> -->
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                           
+                                            <!--/span-->
+                                        </div>
+                                        <!--/row-->
+                                       
+                                       
+                                        <!--/row-->
+                                        
+                                    </div>
+                                    <div class="form-actions">
+                                        <button type="submit" class="btn btn-success"> <i class="fa fa-check"></i> Save</button>
+                                        <button type="button" class="btn btn-inverse">Cancel</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                         </div>
                         <!-- /# card -->
                     </div>
                     <!-- /# column -->
-<!--                     <div class="col-lg-6"> -->
-<!--                         <div class="card"> -->
-                            
-<!--                         </div> -->
-<!--                     </div> -->
+                    <div class="col-lg-6">
+                        
+                    </div>
 				</div>
 				<div class="row">
-<!--                     <div class="col-lg-6"> -->
-                        
-<!--                     </div> -->
+                    <div class="col-lg-12">
+                         <div class="card">
+                        <div class="card-body">
+                                <h4 class="card-title">Table Employes</h4>
+                                <h6 class="card-subtitle"></h6>
+                                <div class="table-responsive m-t-40">
+                                <form action="employe" method="post">
+                                    <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%" height="30px">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Nom Prénom</th>
+                                                <th>Employé Sup</th>
+                                                <th>Action</th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Nom Prénom</th>
+                                                <th>Employé Sup</th>
+                                                <th>Action</th>
+                                               
+                                            </tr>
+                                        </tfoot>
+                                        <tbody>
+                                          <c:forEach items="${liste}" var="rep">
+                                        
+                                            <tr>
+                                                <td>${rep.codeEmploye }</td>
+                                                <td>${rep.nomEmloye }</td>
+                                                <td>${rep.employeSup.codeEmploye }</td>
+                                                <td><a href="editer?idEdit=${rep.codeEmploye}"><button
+														type="button" rel="tooltip" title="Modifier"
+														class="btn btn-success m-b-10 m-l-5" id="toastr-success-top-right">
+														<i class="fa fa-pencil"></i>
+										            </button></a>
+										            <a href="supprimer?idSup=${rep.codeEmploye}"><button
+														type="button" rel="tooltip" title="Supprimer"
+														class="btn btn-danger m-b-10 m-l-5" id="toastr-danger-top-right">
+														<i class="fa fa-user-times"></i>
+										           </button> </a>
+										        </td>
+                                                
+                                            </tr>
+         
+                                           </c:forEach>
+                                        </tbody>
+                                    </table>
+                                  </form>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
 <!-- 					<div class="col-lg-6"> -->
 <!--                         <div class="card"> -->
                             
@@ -459,7 +523,16 @@
     <script src="resources/js/lib/chartist/chartist-init.js"></script>
     <!--Custom JavaScript -->
     <script src="resources/js/custom.min.js"></script>
-
+<!--               database -->
+    <script src="resources/js/lib/datatables/datatables.min.js"></script>
+    <script src="resources/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+    <script src="resources/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>
+    <script src="resources/js/lib/datatables/cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script src="resources/js/lib/datatables/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+    <script src="resources/js/lib/datatables/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+    <script src="resources/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
+    <script src="resources/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
+    <script src="resources/js/lib/datatables/datatables-init.js"></script>
 </body>
 
 </html>

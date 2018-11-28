@@ -22,6 +22,8 @@ public abstract class Compte implements Serializable {
 
    @Id
    @GeneratedValue(strategy=GenerationType.IDENTITY)
+   @Column(name="id_Compte")
+    private long idCompte;
 	private String numCompte;
 	private Date dateCreation;
 	private double solde;

@@ -10,6 +10,7 @@ public interface IDaoEmploye extends IDao<Employe, Long> {
 	
 	public void addEmpToGrp(long codeEmp, long codeGrp);
 	public Employe addEmpl(Employe t,Long codeSup);
+	public List<Employe> findAll();
 	
 
 }

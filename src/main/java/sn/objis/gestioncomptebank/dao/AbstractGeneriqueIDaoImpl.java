@@ -5,8 +5,11 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
 
 public abstract class AbstractGeneriqueIDaoImpl <E,P extends Serializable> implements IDao<E, P>{
 	
@@ -21,7 +24,22 @@ public abstract class AbstractGeneriqueIDaoImpl <E,P extends Serializable> imple
 
 	@Override
 	public E add(E t) {
-		em.persist(t);
+		
+			try {
+				//Etape 1 : ouverture de la transaction
+				EntityTransaction tx = em.getTransaction();
+				tx.begin();
+				//Etape 2 : Traitement
+				em.persist(t);
+				//Etape 3 :Validation de la transaction
+				tx.commit();
+				System.out.println("Persistence réuissie !");
+			} catch (Exception e) {
+				
+				e.printStackTrace();
+				System.out.println("Erreure Persistence !");
+			}
+		
 		return t;
 	}
 
@@ -33,11 +51,24 @@ public abstract class AbstractGeneriqueIDaoImpl <E,P extends Serializable> imple
 
 	@Override
 	public void delete(E t) {
-		if (em.contains(t)) {
-			em.remove(t);
-		}else {
-			em.remove(em.merge(t));
-		
+		try {
+			//Etape 1 : ouverture de la transaction
+			EntityTransaction tx = em.getTransaction();
+			tx.begin();
+			if (em.contains(t)) {
+				em.remove(t);
+			}else {
+				em.remove(em.merge(t));
+			
+			}
+
+			//Etape 3 :Validation de la transaction
+			tx.commit();
+			System.out.println("Suppresion réuissie !");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println("Suppresion Persistence !");
 		}
 		
 	}
@@ -45,9 +76,11 @@ public abstract class AbstractGeneriqueIDaoImpl <E,P extends Serializable> imple
 	@Override
 	public E getById(P id) {
 		E elementFinded = null;
-		
+		//Etape 1 : ouverture de la transaction
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
 		elementFinded = em.find(typeEntite, id);
-		
+		tx.commit();
 		
 		return elementFinded;
 	}
@@ -56,11 +89,21 @@ public abstract class AbstractGeneriqueIDaoImpl <E,P extends Serializable> imple
 	public List<E> getAll() {
 			List<E> listeElements = null;
 			
-			String jpql = "SELECT e FROM E e";
-			
-			TypedQuery<E> tq = em.createQuery(jpql, typeEntite);
-			
-			listeElements = tq.getResultList();
+			try {
+				//Etape 1 : Creation d'un Critéri Builder
+				CriteriaBuilder cb = em.getCriteriaBuilder();
+				//Etape 1 : Creation d'un Critéri query
+				CriteriaQuery<E> cq = cb.createQuery(typeEntite);
+				
+				cq.select(cq.from(typeEntite));
+				TypedQuery<E> query = em.createQuery(cq);
+				
+				listeElements = query.getResultList();
+				
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 	
 		return listeElements;
 	}

@@ -45,9 +45,8 @@ public class Groupe implements Serializable {
 	public void setEmployes(List<Employe> employes) {
 		this.employes = employes;
 	}
-	public Groupe(long numGroupe, String nomGroupe) {
+	public Groupe( String nomGroupe) {
 		super();
-		this.numGroupe = numGroupe;
 		this.nomGroupe = nomGroupe;
 	}
 	

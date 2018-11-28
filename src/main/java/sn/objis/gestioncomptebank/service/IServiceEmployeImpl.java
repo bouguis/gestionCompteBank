@@ -22,7 +22,7 @@ public class IServiceEmployeImpl implements IServiceEmploye {
 	@Override
 	public Employe add(Employe t) {
 		
-		return null;
+		return dao.add(t);
 	}
 
 	/* (non-Javadoc)
@@ -65,6 +65,24 @@ public class IServiceEmployeImpl implements IServiceEmploye {
 	public Employe addEmpl(Employe t, Long codeSup) {
 		dao.addEmpl(t, codeSup);
 		return t;
+	}
+
+	@Override
+	public List<Employe> findAll() {
+		// TODO Auto-generated method stub
+		return dao.findAll();
+	}
+
+	@Override
+	public void addEmpToGrp(long codeEmp, long codeGrp) {
+		dao.addEmpToGrp(codeEmp, codeGrp);
+		
+	}
+
+	@Override
+	public List<Employe> employeByGroup(long codeGrp) {
+		
+		return dao.employeByGroup(codeGrp);
 	}
 
 }
