@@ -24,6 +24,7 @@ public class Employe implements Serializable {
 	@JoinColumn(name="CODE_EMP_SUP")
 	private Employe employeSup;
 	@ManyToMany
+	
 	@JoinTable(name="EMP_GRP",joinColumns=
 	@JoinColumn(name="CODE_EMP"),
 	inverseJoinColumns=@JoinColumn(name="CODE_GRP"))

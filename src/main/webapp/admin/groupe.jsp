@@ -150,7 +150,7 @@
                                                 <div class="mail-contnet">
                                                     <h5>This is another title</h5> <span class="mail-desc">Just a reminder that you have event</span> <span class="time">9:10 AM</span>
                                                 </div>
-                                            </a>
+                                             </a>
                                             <!-- Message -->
                                             <a href="#">
                                                 <div class="btn btn-info btn-circle m-r-10"><i class="ti-settings"></i></div>
@@ -174,7 +174,7 @@
                             </div>
                         </li>
                         <!-- End Comment -->
-                        <!-- Messages -->
+                        <!-- Messages --> 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-muted  " href="#" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-envelope"></i>
 								<div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
@@ -255,17 +255,17 @@
 <!--                             </ul> -->
                         </li>
                         <li class="nav-label"></li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-envelope"></i><span class="hide-menu">Comptes<span class="label label-rouded label-warning pull-right">3</span></span></a>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-envelope"></i><span class="hide-menu">Comptes<span class="label label-rouded label-warning pull-right">2</span></span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="#">Nouveau compte</a></li>
-                                <li><a href="#">Consulter compte</a></li>
-                                <li><a href="#">Liste Comptes</a></li>
+                                <li><a href="compte">Nouveau compte</a></li>
+                                <li><a href="operation">Operation compte</a></li>
+                               
                             </ul>
                         </li>
                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-users"></i><span class="hide-menu">Clients<span class="label label-rouded label-danger pull-right">2</span></span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="#">Nouveau Client</a></li>
-                                <li><a href="#">Liste Clients</a></li>
+                                <li><a href="client">Liste Client</a></li>
+                                
 <!--                                 <li><a href="#">ChartJs</a></li> -->
                                 
                             </ul>

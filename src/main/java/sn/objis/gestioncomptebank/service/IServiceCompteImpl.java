@@ -1,16 +1,14 @@
 package sn.objis.gestioncomptebank.service;
 
-import java.util.Date;
 import java.util.List;
 
 import sn.objis.gestioncomptebank.dao.IDaoCompteImpl;
 import sn.objis.gestioncomptebank.domaine.Compte;
-import sn.objis.gestioncomptebank.domaine.CompteCourant;
-import sn.objis.gestioncomptebank.domaine.CompteEpargne;
+
 
 public class IServiceCompteImpl implements IServiceCompte{
 	
-	IDaoCompteImpl dao = null;
+	IDaoCompteImpl dao = new IDaoCompteImpl();
 
 	@Override
 	public Compte add(Compte t) {
@@ -48,16 +46,18 @@ public class IServiceCompteImpl implements IServiceCompte{
 		return dao.compteByClient(codeClient);
 	}
 
+	
+
 	@Override
-	public void addCompteCourant(String numCompte,Date dateCreation, double solde, double decouvert, long codeClient, long codeEmploye) {
-		dao.addCompte(new CompteCourant(numCompte, dateCreation, solde, decouvert), codeClient, codeEmploye);
+	public Compte ajoutCompte(Compte cmpt, long codeEmploye) {
+		
+		return dao.addCompte(cmpt,  codeEmploye);
 	}
 
 	@Override
-	public void addCompteEpargne(String numCompte, Date dateCreation, double solde, double taux, long codeClient,
-			long codeEmploye) {
-		dao.addCompte(new CompteEpargne(numCompte, dateCreation, solde, taux), codeClient, codeEmploye);
+	public Compte consulterCompte(String numCompte) {
 		
+		return dao.consulterCompte(numCompte);
 	}
 
 }

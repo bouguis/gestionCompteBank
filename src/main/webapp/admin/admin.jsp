@@ -255,17 +255,17 @@
 <!--                             </ul> -->
                         </li>
                         <li class="nav-label"></li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-envelope"></i><span class="hide-menu">Comptes<span class="label label-rouded label-warning pull-right">3</span></span></a>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-envelope"></i><span class="hide-menu">Comptes<span class="label label-rouded label-warning pull-right">2</span></span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="#">Nouveau compte</a></li>
-                                <li><a href="#">Consulter compte</a></li>
-                                <li><a href="#">Liste Comptes</a></li>
+                                <li><a href="compte">Opérations compte</a></li>
+                                <li><a href="operation">Consulter compte</a></li>
+                                
                             </ul>
                         </li>
                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-users"></i><span class="hide-menu">Clients<span class="label label-rouded label-danger pull-right">2</span></span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="#">Nouveau Client</a></li>
-                                <li><a href="#">Liste Clients</a></li>
+                                <li><a href="client">Liste Client</a></li>
+                               
 <!--                                 <li><a href="#">ChartJs</a></li> -->
                                 
                             </ul>
@@ -320,7 +320,7 @@
             <!-- Bread crumb -->
             <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
-                    <h3 class="text-primary">Gestion des Comptes </h3> </div>
+                    <h3 class="text-primary">Gestion des Comptes</h3>${nom } </div>
                 <div class="col-md-7 align-self-center">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="javascript:void(0)"></a></li>
@@ -350,11 +350,11 @@
                         <div class="card bg-pink p-20">
                             <div class="media widget-ten">
                                 <div class="media-left meida media-middle">
-                                    <span><i class="ti-comment f-s-40"></i></span>
+                                    <span><i class="fa fa-users f-s-40"></i></span>
                                 </div>
                                 <div class="media-body media-text-right">
-                                    <h2 class="color-white">278</h2>
-                                    <p class="m-b-0">New Comment</p>
+                                    <h2 class="color-white"><c:out value="${ NombreClient }"/></h2>
+                                    <p class="m-b-0">Nombre Clients</p>
                                 </div>
                             </div>
                         </div>
@@ -363,11 +363,11 @@
                         <div class="card bg-success p-20">
                             <div class="media widget-ten">
                                 <div class="media-left meida media-middle">
-                                    <span><i class="ti-vector f-s-40"></i></span>
+                                    <span><i class="fa fa-users f-s-40"></i></span>
                                 </div>
                                 <div class="media-body media-text-right">
-                                    <h2 class="color-white">$27647</h2>
-                                    <p class="m-b-0">Bounce Rate</p>
+                                    <h2 class="color-white"><c:out value="${ NombreGroupe }"/></h2>
+                                    <p class="m-b-0">Nombtre Groupes</p>
                                 </div>
                             </div>
                         </div>

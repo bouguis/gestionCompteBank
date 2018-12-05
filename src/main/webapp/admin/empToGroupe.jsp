@@ -255,17 +255,17 @@
 <!--                             </ul> -->
                         </li>
                         <li class="nav-label"></li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-envelope"></i><span class="hide-menu">Comptes<span class="label label-rouded label-warning pull-right">3</span></span></a>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-envelope"></i><span class="hide-menu">Comptes<span class="label label-rouded label-warning pull-right">2</span></span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="#">Nouveau compte</a></li>
-                                <li><a href="#">Consulter compte</a></li>
-                                <li><a href="#">Liste Comptes</a></li>
+                                <li><a href="compte">Nouveau compte</a></li>
+                                <li><a href="operation">Operations compte</a></li>
+                               
                             </ul>
                         </li>
                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-users"></i><span class="hide-menu">Clients<span class="label label-rouded label-danger pull-right">2</span></span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="#">Nouveau Client</a></li>
-                                <li><a href="#">Liste Clients</a></li>
+                                <li><a href="client">Liste Client</a></li>
+                               
 <!--                                 <li><a href="#">ChartJs</a></li> -->
                                 
                             </ul>

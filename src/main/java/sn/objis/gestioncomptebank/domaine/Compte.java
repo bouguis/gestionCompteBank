@@ -21,9 +21,7 @@ public abstract class Compte implements Serializable {
 	private static final long serialVersionUID = 1L;
 
    @Id
-   @GeneratedValue(strategy=GenerationType.IDENTITY)
-   @Column(name="id_Compte")
-    private long idCompte;
+   @Column(unique=true)
 	private String numCompte;
 	private Date dateCreation;
 	private double solde;
@@ -33,7 +31,7 @@ public abstract class Compte implements Serializable {
 	@ManyToOne
 	@JoinColumn(name="CODE_EMPLOYE")
 	private Employe employe;
-	@OneToMany
+	@OneToMany(mappedBy="compte")
 	private List<Operation> operations;
 
 	public Compte() {
@@ -82,6 +80,8 @@ public abstract class Compte implements Serializable {
 		this.dateCreation = dateCreation;
 		this.solde = solde;
 	}
+
+	
 	
 	
 }

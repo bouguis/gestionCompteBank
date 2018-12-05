@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="resources/image/png" sizes="16x16" href="resources/images/favicon.png">
-    <title>Ela - Bootstrap Admin Dashboard Template</title>
+    <title>Géstion Comptes Bancaires</title>
     <!-- Bootstrap Core CSS -->
     <link href="resources/css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -24,7 +24,7 @@
 <![endif]-->
 </head>
 
-<body class="fix-header fix-sidebar">
+<body class="fix-header fix-sidebar" style="background-image: url('resources/images/bk.jpeg')">
     <!-- Preloader - style you can find in spinners.css -->
     <div class="preloader">
         <svg class="circular" viewBox="25 25 50 50">
@@ -40,14 +40,14 @@
                         <div class="login-content card">
                             <div class="login-form">
                                 <h4>Login</h4>
-                                <form>
+                                <form method="post" action="login">
                                     <div class="form-group">
                                         <label>Email address</label>
-                                        <input type="email" class="form-control" placeholder="Email">
+                                        <input type="text" name="login" class="form-control" placeholder="Login">
                                     </div>
                                     <div class="form-group">
                                         <label>Password</label>
-                                        <input type="password" class="form-control" placeholder="Password">
+                                        <input type="password" name="password" class="form-control" placeholder="Password">
                                     </div>
                                     <div class="checkbox">
                                         <label>

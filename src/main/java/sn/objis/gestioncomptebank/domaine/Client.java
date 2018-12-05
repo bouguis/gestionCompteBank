@@ -20,12 +20,21 @@ public class Client implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long codeClient;
 	private String nom;
+	private String adresse;
 	@OneToMany(mappedBy="client")
 	private List<Compte> comptes;
 
 	public Client() {
 		super();
 	}
+	
+
+	public Client(String nom, String adresse) {
+		super();
+		this.nom = nom;
+		this.adresse = adresse;
+	}
+
 
 	public long getCodeClient() {
 		return codeClient;
@@ -45,11 +54,17 @@ public class Client implements Serializable {
 	public void setComptes(List<Compte> comptes) {
 		this.comptes = comptes;
 	}
-	public Client(long codeClient, String nom) {
-		super();
-		this.codeClient = codeClient;
-		this.nom = nom;
+	
+	
+	public String getAdresse() {
+		return adresse;
 	}
+
+	public void setAdresse(String adresse) {
+		this.adresse = adresse;
+	}
+
+	
    
 	
 }

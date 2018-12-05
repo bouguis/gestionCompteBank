@@ -7,6 +7,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 
 /**
  * Servlet implementation class Login
@@ -40,12 +42,16 @@ public class Login extends HttpServlet {
 		String login = request.getParameter("login");
 		String password = request.getParameter("password");
 		RequestDispatcher rd;
+	
 		
 		try {
 			//Transmission des valeurs au serveur pour l'authentification
 			request.login(login, password);
 			//Redirection vers les spaces dde travails
 			if (request.isUserInRole(roles.admin.toString())) {
+				request.setAttribute("nom", login);
+				
+				
 			
 				response.sendRedirect(response.encodeRedirectURL(request.getContextPath() + "/admin"));
 			
