@@ -7,8 +7,10 @@ sn/objis/gestioncomptebank/presentation/GroupeServlet.class
 sn/objis/gestioncomptebank/dao/AbstractGeneriqueIDaoImpl.class
 sn/objis/gestioncomptebank/service/IServiceEmployeImpl.class
 sn/objis/gestioncomptebank/domaine/Client.class
+sn/objis/gestioncomptebank/presentation/ClientServlet.class
 sn/objis/gestioncomptebank/presentation/Login$roles.class
 sn/objis/gestioncomptebank/service/IServiceClientImpl.class
+sn/objis/gestioncomptebank/presentation/OperationServlet.class
 sn/objis/gestioncomptebank/service/IServiceGroupImpl.class
 sn/objis/gestioncomptebank/presentation/supprimer.class
 sn/objis/gestioncomptebank/presentation/AdminServlet.class
@@ -21,6 +23,7 @@ sn/objis/gestioncomptebank/dao/IDao.class
 sn/objis/gestioncomptebank/dao/IDaoEmployeImpl.class
 sn/objis/gestioncomptebank/presentation/EmployeServlet.class
 sn/objis/gestioncomptebank/dao/IDaoCompteImpl.class
+sn/objis/gestioncomptebank/presentation/CompteServlet.class
 sn/objis/gestioncomptebank/presentation/EmpToGroup.class
 sn/objis/gestioncomptebank/dao/IDaoGroupe.class
 sn/objis/gestioncomptebank/dao/IDaoClientImpl.class

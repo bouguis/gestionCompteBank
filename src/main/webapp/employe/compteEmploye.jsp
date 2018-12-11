@@ -257,37 +257,37 @@
                         <li class="nav-label"></li>
                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-envelope"></i><span class="hide-menu">Comptes<span class="label label-rouded label-warning pull-right">2</span></span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="compteEmp">Nouvau compte</a></li>
-                                <li><a href="operationEmp">Operations compte</a></li>
+                                <li><a href="compteEmp">Nouveau compte</a></li>
+                                <li><a href="operationEmp">Operation compte</a></li>
                                 
                             </ul>
-                        </li>
+<!--                         </li> -->
 <!--                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-users"></i><span class="hide-menu">Clients<span class="label label-rouded label-danger pull-right">2</span></span></a> -->
 <!--                             <ul aria-expanded="false" class="collapse"> -->
 <!--                                 <li><a href="client">Liste Client</a></li> -->
-                               
+                                
 <!-- <!--                                 <li><a href="#">ChartJs</a></li> --> 
                                 
 <!--                             </ul> -->
 <!--                         </li> -->
-<!--                         <li class="nav-label"></li> -->
-<!--                         <li> <a class=" " href="#" aria-expanded="false"><i class=""></i><span class=""><span></span></span></a> -->
-<!--                             <ul aria-expanded="false" class=""> -->
-<!-- <!--                                 <li><a href="employe">Nouveau Employe</a></li> --> 
-<!-- <!--                                 <li><a href="empgroup">Ajout EmpToGrp</a></li> --> 
+                        <li class="nav-label"></li>
+<!--                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-users"></i><span class="hide-menu">Employes<span class="label label-rouded label-warning pull-right">2</span></span></a> -->
+<!--                             <ul aria-expanded="false" class="collapse"> -->
+<!--                                 <li><a href="employe">Nouveau Employe</a></li> -->
+<!--                                 <li><a href="empgroup">Ajout EmpToGrp</a></li> -->
 <!-- <!--                                 <li><a href="ui-dropdown.html">Dropdown</a></li> --> 
                                 
 <!--                             </ul> -->
 <!--                         </li> -->
-<!-- 						<li> <a class="has-arrow  " href="#" aria-expanded="false"><i class=""></i><span class="hide-menu"><span ></span></span></a> -->
+<!-- 						<li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-users"></i><span class="hide-menu">Groupe<span class="label label-rouded label-danger pull-right">2</span></span></a> -->
 <!--                             <ul aria-expanded="false" class="collapse"> -->
-<!-- <!--                                 <li><a href="groupe">Nouveau Groupe</a></li> --> 
-<!-- <!--                                 <li><a href="#">Liste Groupes</a></li> --> 
+<!--                                 <li><a href="groupe">Nouveau Groupe</a></li> -->
+<!--                                 <li><a href="#">Liste Groupes</a></li> -->
 <!-- <!--                                 <li><a href="uc-nestedable.html">Nestedable</a></li> --> 
                                 
 <!--                             </ul> -->
 <!--                         </li> -->
-<!--                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class=""></i><span class="hide-menu"><span></span></span></a> -->
+<!--                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-wpforms"></i><span class="hide-menu">Transactions<span class="label label-rouded label-warning pull-right">1</span></span></a> -->
 <!--                             <ul aria-expanded="false" class="collapse"> -->
 <!-- <!--                                 <li><a href="form-basic.html">Opérations sur les Comptes</a></li> --> 
 <!-- <!--                                 <li><a href="form-layout.html">Form Layout</a></li> --> 
@@ -296,11 +296,11 @@
 <!-- <!--                                 <li><a href="form-dropzone.html">Dropzone</a></li> --> 
 <!--                             </ul> -->
 <!--                         </li> -->
-<!--                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class=""></i><span class="hide-menu"></span></a> -->
-<!-- <!--                             <ul aria-expanded="false" class="collapse"> --> 
-<!-- <!--                                 <li><a href="table-bootstrap.html">Basic Tables</a></li> --> 
-<!-- <!--                                 <li><a href="table-datatable.html">Data Tables</a></li> --> 
-<!-- <!--                             </ul> --> 
+<!--                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-table"></i><span class="hide-menu">Tables</span></a> -->
+<!--                             <ul aria-expanded="false" class="collapse"> -->
+<!--                                 <li><a href="table-bootstrap.html">Basic Tables</a></li> -->
+<!--                                 <li><a href="table-datatable.html">Data Tables</a></li> -->
+<!--                             </ul> -->
 <!--                         </li> -->
 <!--                         <li class="nav-label"></li> -->
                         
@@ -320,7 +320,7 @@
             <!-- Bread crumb -->
             <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
-                    <h3 class="text-primary">Gestion des Comptes</h3> ${nom} </div>
+                    <h3 class="text-primary">Gestion des Comptes </h3> </div>
                 <div class="col-md-7 align-self-center">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="javascript:void(0)"></a></li>
@@ -332,79 +332,160 @@
             <!-- Container fluid  -->
             <div class="container-fluid">
                 <!-- Start Page Content -->
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="card bg-primary p-20">
-                            <div class="media widget-ten">
-                                <div class="media-left meida media-middle">
-                                    <span><i class="fa fa-users f-s-40"></i></span>
-                                </div>
-                                <div class="media-body media-text-right">
-                                    <h2 class="color-white"><c:out value="${ NombreEmp }"/></h2>
-                                    <p class="m-b-0">Employes</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card bg-pink p-20">
-                            <div class="media widget-ten">
-                                <div class="media-left meida media-middle">
-                                    <span><i class="fa fa-users f-s-40"></i></span>
-                                </div>
-                                <div class="media-body media-text-right">
-                                    <h2 class="color-white"><c:out value="${ NombreClient }"/></h2>
-                                    <p class="m-b-0">Clients</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card bg-success p-20">
-                            <div class="media widget-ten">
-                                <div class="media-left meida media-middle">
-                                    <span><i class="fa fa-users f-s-40"></i></span>
-                                </div>
-                                <div class="media-body media-text-right">
-                                    <h2 class="color-white"><c:out value="${ NombreGroupe }"/></h2>
-                                    <p class="m-b-0">Groupes</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card bg-danger p-20">
-                            <div class="media widget-ten">
-                                <div class="media-left meida media-middle">
-                                    <span><i class="ti-location-pin f-s-40"></i></span>
-                                </div>
-                                <div class="media-body media-text-right">
-                                    <h2 class="color-white"><c:out value="${NombreCompte}"/></h2>
-                                    <p class="m-b-0">Comptes</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
 
                 <div class="row">
-                    <div class="col-lg-12">
+                <div class="col-lg-2">
+                
+                </div>
+                    <div class="col-lg-8">
                         <div class="card">
-                           
+                           <div class="card card-outline-primary">
+                            <div class="card-header">
+                                <h4 class="m-b-0 text-white">Ajout Comptes d'un Client</h4>
+                            </div>
+                            <div class="card-body">
+                                <form method="post" action="compteEmp">
+                                    <div class="form-body">
+                                        <h3 class="card-title m-t-15"></h3>
+                                        <hr>
+                                        <div class="row p-t-20">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Nom Prénom</label>
+                                                    <input type="text" name="nom" id="firstName" class="form-control" required="required">
+                                                     </div>
+                                            </div>
+                                             <div class="col-md-6">
+                                                
+                                                     <div>
+                                                    <label class="control-label">Adresse</label>
+                                                    <input type="text" name="adresse" id="firstName" class="form-control" required="required">
+                                                           
+                                                     </div>
+                                            </div>
+                                        </div>
+                                        <!--/row-->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Numéro Compte</label>
+                                                    <input type="text" name="numero" id="firstName" class="form-control" required="required">
+                                                     </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div>
+                                                    <label class="control-label">Teaux ou Découvert</label>
+                                                    <input type="text" name="teaux" id="firstName" class="form-control" required="required">
+                                                  
+                                                     </div>
+                                            </div>
+                                        </div>
+                                        <!--/row-->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Solde</label>
+                                                    
+                                                         <input type="text" name="solde"  class="form-control" required="required">
+                                                </div>
+                                            </div>
+                                           <div class="col-md-6">
+                                                <div class="form-group has-success">
+                                                    <label class="control-label">Type Compte</label>
+                                                    <select name="compte" class="form-control custom-select">
+                                                        <option value="CompteEpargne">CompteEpargne</option>
+                                                        <option value="CompteCourant">CompteCourant</option>
+                                                    </select>
+                                                           
+                                                     </div>
+                                            </div>
+                                             
+                                        </div>
+                                        <!--/row-->
+                                       
+                                       
+                                        <!--/row-->
+                                        
+                                    </div>
+                                    <div class="form-actions">
+                                        <button type="submit" class="btn btn-success"> <i class="fa fa-check"></i> Save</button>
+                                        <button type="button" class="btn btn-inverse">Cancel</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                         </div>
                         <!-- /# card -->
                     </div>
                     <!-- /# column -->
-<!--                     <div class="col-lg-6"> -->
-<!--                         <div class="card"> -->
-                            
-<!--                         </div> -->
-<!--                     </div> -->
+                    <div class="col-lg-6">
+                        
+                    </div>
 				</div>
 				<div class="row">
-<!--                     <div class="col-lg-6"> -->
-                        
-<!--                     </div> -->
+                    <div class="col-lg-12">
+                         <div class="card">
+                        <div class="card-body">
+                                <h4 class="card-title">Table Employes</h4>
+                                <h6 class="card-subtitle"></h6>
+                                <div class="table-responsive m-t-40">
+                                <form action="employeEmp" method="post">
+                                    <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%" height="30px">
+                                        <thead>
+                                            <tr>
+                                                <th>Numéro Compte</th>
+                                                <th>Type Compte</th>
+                                                <th>Date Création</th>                                           
+                                                <th>Solde</th>
+                                                 <th>Action</th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+                                                
+                                                <th>Numéro Compte</th>
+                                                <th>Type Compte</th>
+                                                <th>Date Création</th>                                               
+                                                <th>Solde</th>
+                                                <th>Action</th>
+                                               
+                                            </tr>
+                                        </tfoot>
+                                        <tbody>
+                                          <c:forEach items="${listeCompte}" var="rep">
+                                        
+                                            <tr>
+                                                
+                                                <td>${rep.numCompte }</td>
+                                                <td>${rep}</td>
+                                                <td>${rep.dateCreation }</td>                                             
+                                                <td>${rep.solde }</td>
+                                                
+                                                <td><a href="editer?idEdit="><button
+														type="button" rel="tooltip" title="Modifier"
+														class="btn btn-success m-b-10 m-l-5" id="toastr-success-top-right">
+														<i class="fa fa-pencil"></i>
+										            </button></a>
+										            <a href="supprimer?idSup="><button
+														type="button" rel="tooltip" title="Supprimer"
+														class="btn btn-danger m-b-10 m-l-5" id="toastr-danger-top-right">
+														<i class="fa fa-user-times"></i>
+										           </button> </a>
+										        </td>
+                                                
+                                            </tr>
+         
+                                           </c:forEach>
+                                        </tbody>
+                                    </table>
+                                  </form>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
 <!-- 					<div class="col-lg-6"> -->
 <!--                         <div class="card"> -->
                             
@@ -459,7 +540,16 @@
     <script src="resources/js/lib/chartist/chartist-init.js"></script>
     <!--Custom JavaScript -->
     <script src="resources/js/custom.min.js"></script>
-
+<!--               database -->
+    <script src="resources/js/lib/datatables/datatables.min.js"></script>
+    <script src="resources/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+    <script src="resources/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>
+    <script src="resources/js/lib/datatables/cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script src="resources/js/lib/datatables/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+    <script src="resources/js/lib/datatables/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+    <script src="resources/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
+    <script src="resources/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
+    <script src="resources/js/lib/datatables/datatables-init.js"></script>
 </body>
 
 </html>

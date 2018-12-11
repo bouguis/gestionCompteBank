@@ -19,7 +19,9 @@ import sn.objis.gestioncomptebank.service.IServiceGroupImpl;
  */
 public class EmployeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+	//instentiation du service
+    IServiceEmployeImpl service = new IServiceEmployeImpl();
+    IServiceGroupImpl serviceGr = new IServiceGroupImpl();
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -32,8 +34,8 @@ public class EmployeServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		IServiceEmployeImpl service = new IServiceEmployeImpl();
-		IServiceGroupImpl serviceGr = new IServiceGroupImpl();
+		
+		
 		
 		request.setAttribute("liste", service.findAll());
 		request.setAttribute("listeG", serviceGr.getAll() );
@@ -50,9 +52,8 @@ public class EmployeServlet extends HttpServlet {
 		
 		String nom = request.getParameter("nomprenom");
 		long code = Long.parseLong(request.getParameter("code")) ;
-		String g = request.getParameter("groupe");
-		//instentiation du service
-		IServiceEmployeImpl service = new IServiceEmployeImpl();
+		//String g = request.getParameter("groupe");
+		
 		
 		Employe e = new Employe(nom);
 		service.addEmpl(e, code);

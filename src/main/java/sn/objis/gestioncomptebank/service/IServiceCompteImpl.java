@@ -4,6 +4,7 @@ import java.util.List;
 
 import sn.objis.gestioncomptebank.dao.IDaoCompteImpl;
 import sn.objis.gestioncomptebank.domaine.Compte;
+import sn.objis.gestioncomptebank.domaine.Operation;
 
 
 public class IServiceCompteImpl implements IServiceCompte{
@@ -58,6 +59,12 @@ public class IServiceCompteImpl implements IServiceCompte{
 	public Compte consulterCompte(String numCompte) {
 		
 		return dao.consulterCompte(numCompte);
+	}
+
+	@Override
+	public List<Operation> consulterOperation(String numCompte) {
+		
+		return dao.consulterOperation(numCompte);
 	}
 
 }

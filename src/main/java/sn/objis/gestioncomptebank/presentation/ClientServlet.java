@@ -16,7 +16,7 @@ import sn.objis.gestioncomptebank.service.IServiceClientImpl;
  */
 public class ClientServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+	IServiceClientImpl service = new IServiceClientImpl();
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -29,7 +29,7 @@ public class ClientServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		IServiceClientImpl service = new IServiceClientImpl();
+		
 		request.setAttribute("listeClients", service.getAll());
 		RequestDispatcher rd = request.getRequestDispatcher("admin/client.jsp");
 		rd.forward(request, response);
@@ -41,7 +41,7 @@ public class ClientServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String nom = request.getParameter("nomprenom");
 		String adresse = request.getParameter("adresse");
-		IServiceClientImpl service = new IServiceClientImpl();
+		
 		service.add(new Client(nom, adresse));
 		request.setAttribute("listeClients", service.getAll());
 		RequestDispatcher rd = request.getRequestDispatcher("admin/client.jsp");

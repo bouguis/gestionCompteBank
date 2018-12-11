@@ -287,24 +287,24 @@
                                 
                             </ul>
                         </li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-wpforms"></i><span class="hide-menu">Transactions<span class="label label-rouded label-warning pull-right">1</span></span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="form-basic.html">Opérations sur les Comptes</a></li>
-<!--                                 <li><a href="form-layout.html">Form Layout</a></li> -->
-<!--                                 <li><a href="form-validation.html">Form Validation</a></li> -->
-<!--                                 <li><a href="form-editor.html">Editor</a></li> -->
-<!--                                 <li><a href="form-dropzone.html">Dropzone</a></li> -->
-                            </ul>
-                        </li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-table"></i><span class="hide-menu">Tables</span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="table-bootstrap.html">Basic Tables</a></li>
-                                <li><a href="table-datatable.html">Data Tables</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-label"></li>
+<!--                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-wpforms"></i><span class="hide-menu">Transactions<span class="label label-rouded label-warning pull-right">1</span></span></a> -->
+<!--                             <ul aria-expanded="false" class="collapse"> -->
+<!--                                 <li><a href="form-basic.html">Opérations sur les Comptes</a></li> -->
+<!-- <!--                                 <li><a href="form-layout.html">Form Layout</a></li> --> 
+<!-- <!--                                 <li><a href="form-validation.html">Form Validation</a></li> --> 
+<!-- <!--                                 <li><a href="form-editor.html">Editor</a></li> --> 
+<!-- <!--                                 <li><a href="form-dropzone.html">Dropzone</a></li> --> 
+<!--                             </ul> -->
+<!--                         </li> -->
+<!--                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-table"></i><span class="hide-menu">Tables</span></a> -->
+<!--                             <ul aria-expanded="false" class="collapse"> -->
+<!--                                 <li><a href="table-bootstrap.html">Basic Tables</a></li> -->
+<!--                                 <li><a href="table-datatable.html">Data Tables</a></li> -->
+<!--                             </ul> -->
+<!--                         </li> -->
+<!--                         <li class="nav-label"></li> -->
                         
-                        <li class="nav-label"></li>
+<!--                         <li class="nav-label"></li> -->
                        
                        
                         
@@ -384,7 +384,7 @@
                                         
                                     </div>
                                     <div class="form-actions">
-                                        <button type="submit" class="btn btn-success"> <i class="fa fa-check"></i>Recherche</button>
+                                        <button type="submit" class="btn btn-success" name="action"> <i class="fa fa-check"></i>Recherche</button>
                                         <button type="button" class="btn btn-inverse">Cancel</button>
                                     </div>
                                 </form>
@@ -435,7 +435,7 @@
                                                 <th scope="row">4</th>
                                                 <td>Taux</td>
                                                
-                                                <td><span class="badge badge-danger">${compteTrouve.taux}</span></td>
+                                                <td><span class="badge badge-success">${compteTrouve.taux}</span></td>
                                                
                                             </tr>
                                              </c:if>
@@ -445,10 +445,24 @@
                                                 <th scope="row">4</th>
                                                 <td>Decouvert</td>
                                                 
-                                                <td><span class="badge badge-danger">${compteTrouve.decouvert}</span></td>
+                                                <td><span class="badge badge-primary">${compteTrouve.decouvert}</span></td>
                    
                                             </tr>
                                             </c:if>
+                                             <tr>
+                                                <th scope="row">5</th>
+                                                <td>Nom Client</td>
+                                               
+                                                <td><span class="badge badge-danger">${compteTrouve.client.nom}</span></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">6</th>
+                                                <td>Nom Employe</td>
+                                               
+                                                <td><span class="badge badge-danger">${compteTrouve.employe.nomEmloye}</span></td>
+                                               
+                                            </tr>
                                             
                                         </tbody>
                                     </table>
@@ -477,71 +491,179 @@
 				</div>
 				<div class="row">
                     <div class="col-lg-6">
+                    
+                        <div class="card">
+                         <div class="card card-outline-primary">
+                         <form action="operation" method="post" >
+                            <div class="card-header">
+                                <h4 class="m-b-0 text-white">Opérations sur le Compte : ${compteTrouve.numCompte}</h4>
+                            </div>
+                             
+                            <div>
+                                <div class="container">
+
+							  <label class="radio-inline">
+							
+							    <input type="radio" name="op" id="Radios1" value="retrait">
+							
+							    Retrait
+							
+							  </label>
+							
+							  <label class="radio-inline">
+							
+							    <input type="radio" name="op" id="Radios2" value="versement">
+							
+							    Versement
+							
+							  </label>
+							
+							  <label class="radio-inline">
+							
+							    <input type="radio" name="op" id="Radios3" value="virement"  >
+							
+							    Virement
+							
+							  </label>
+							
+							</div>
+							</div>
+                            
+                            <div class="card-body">
+                               
+                                    <div class="form-body">
+                                        <h3 class="card-title m-t-15"></h3>
+                                        <hr>
+                                        <div class="row p-t-20">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Montant</label>
+                                                    <input type="text" name="montant" id="firstName" class="form-control" required="required">
+                                                     </div>
+                                                     
+                                                       <div class="form-group">
+                                                    <label class="control-label"></label>
+                                                    <input name="numeroCompte" type="hidden" class="form-control" value="${compteTrouve.numCompte}">
+                                                     </div>
+                                                    
+                                                      
+                                                </div>
+                                                     <div class="form-group">
+                                                    <label class="control-label">Vers le compte :</label>
+                                                    <input type="text" name="compte2" id="firstName" class="form-control" >
+                                                     </div>
+                                                     
+                                                    
+                                                    
+                                                    
+                                                     
+                                                     
+                                                        
+                                            </div>
+                                       
                         
-                    </div>
+                                             
+                                            
+                                        </div>
+                                        <!--/row-->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                
+                                            </div>
+                                            <!--/span-->
+                                           
+                                            <!--/span-->
+                                        </div>
+                                        <!--/row-->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                               
+                                            </div>
+                                            <!--/span-->
+                                           
+                                            <!--/span-->
+                                        </div>
+                                        <!--/row-->
+                                       
+                                       
+                                        <!--/row-->
+                                        
+                                    </div>
+                                    <div class="form-actions">
+                                        <button type="submit" name="action1" class="btn btn-success"> <i class="fa fa-check"></i>Enregistrer</button>
+                                        <button type="button" class="btn btn-inverse">Cancel</button>
+                                    </div>
+                                </form>
+                            </div>
+                           
+                        </div>
+                        </div>
+                    
+                    
 					<div class="col-lg-6">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Table Groupe</h4>
+                                <h4 class="card-title">Table Operations</h4>
                                 <h6 class="card-subtitle"></h6>
+                                
                                 <div class="table-responsive m-t-40">
-                                <form action="employe" method="post">
+                                <form action="operation" method="post">
                                     <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%" height="30px">
                                         <thead>
                                             <tr>
-                                                <th>ID</th>
-                                                <th>Nom Groupe</th>
-                                                <th>Action</th>
+                                                <th>Numéro</th>
+                                                <th>Type</th>
+                                                <th>Date</th>
+                                                <th>Montant</th>
+                                               
                                                 
                                                 
                                             </tr>
                                         </thead>
                                         <tfoot>
                                             <tr>
-                                                <th>ID</th>
-                                                <th>Nom Groupe</th>
-                                                <th>Action</th>
+                                                <th>Numéro</th>
+                                                <th>Type</th>
+                                                <th>Date</th>
+                                                <th>Montant</th>
+                                                
                                                 
                                                
                                             </tr>
                                         </tfoot>
                                         <tbody>
-                                          <c:forEach items="${liste}" var="rep">
+                                        <c:if test="${not empty compteTrouve }">
+                                          <c:forEach items="${operations}" var="rep">
                                         
                                             <tr>
-                                                <td>${rep.numGroupe }</td>
-                                                <td>${rep.nomGroupe }</td>
-                                                <td><a href="editer?idEdit=${rep.numGroupe}"><button
-														type="button" rel="tooltip" title="Modifier"
-														class="btn btn-success m-b-10 m-l-5" id="toastr-success-top-right">
-														<i class="fa fa-pencil"></i>
-										            </button></a>
-										            <a href="supprimer?idSup=${rep.numGroupe}"><button
-														type="button" rel="tooltip" title="Supprimer"
-														class="btn btn-danger m-b-10 m-l-5" id="toastr-danger-top-right">
-														<i class="fa fa-user-times"></i>
-										           </button> </a>
-										        </td>
+                                                <td>${rep.numOperation }</td>
+                                                 <td>${rep}</td>
+                                                <td>${rep.dateOperation }</td>
+                                                <td>${rep.montant}</td>
+                                               
                                                 
                                             </tr>
          
                                            </c:forEach>
+                                           </c:if>
                                         </tbody>
                                     </table>
                                   </form>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
+                   
                     <!-- /# column -->
                 </div>
                 <!-- /# row -->
 
-                <div class="row">
-                 <div class="card">
+<!--                 <div class="row"> -->
+<!--                  <div class="card"> -->
                  
-                 </div>   
-                </div>
+<!--                  </div>    -->
+<!--                 </div> -->
 
 
                 <!-- End PAge Content -->

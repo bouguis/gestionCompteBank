@@ -16,7 +16,8 @@ import sn.objis.gestioncomptebank.service.IServiceGroupImpl;
  */
 public class ListeEmpToGrp extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+	IServiceEmployeImpl service = new IServiceEmployeImpl();
+	IServiceGroupImpl serviceGr = new IServiceGroupImpl();
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -37,9 +38,7 @@ public class ListeEmpToGrp extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		long codeGrp = Long.parseLong(request.getParameter("code")) ;
-		IServiceEmployeImpl service = new IServiceEmployeImpl();
-		IServiceGroupImpl serviceGr = new IServiceGroupImpl();
-		
+
 		request.setAttribute("listeEG", service.employeByGroup(codeGrp));
 		request.setAttribute("liste", service.findAll());
 		request.setAttribute("listeG", serviceGr.getAll() );

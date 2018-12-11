@@ -2,6 +2,7 @@
 /home/diawara/eclipse-workspace/Maven/gestionCompteBank/src/main/java/sn/objis/gestioncomptebank/presentation/Login.java
 /home/diawara/eclipse-workspace/Maven/gestionCompteBank/src/main/java/sn/objis/gestioncomptebank/dao/IDaoClient.java
 /home/diawara/eclipse-workspace/Maven/gestionCompteBank/src/main/java/sn/objis/gestioncomptebank/dao/IDaoOperationImpl.java
+/home/diawara/eclipse-workspace/Maven/gestionCompteBank/src/main/java/sn/objis/gestioncomptebank/presentation/ClientServlet.java
 /home/diawara/eclipse-workspace/Maven/gestionCompteBank/src/main/java/sn/objis/gestioncomptebank/presentation/AdminServlet.java
 /home/diawara/eclipse-workspace/Maven/gestionCompteBank/src/main/java/sn/objis/gestioncomptebank/dao/IDaoClientImpl.java
 /home/diawara/eclipse-workspace/Maven/gestionCompteBank/src/main/java/sn/objis/gestioncomptebank/service/IServiceOperation.java
@@ -24,6 +25,7 @@
 /home/diawara/eclipse-workspace/Maven/gestionCompteBank/src/main/java/sn/objis/gestioncomptebank/presentation/EmpToGroup.java
 /home/diawara/eclipse-workspace/Maven/gestionCompteBank/src/main/java/sn/objis/gestioncomptebank/presentation/ListeEmpToGrp.java
 /home/diawara/eclipse-workspace/Maven/gestionCompteBank/src/main/java/sn/objis/gestioncomptebank/dao/IDaoGroupeImpl.java
+/home/diawara/eclipse-workspace/Maven/gestionCompteBank/src/main/java/sn/objis/gestioncomptebank/presentation/OperationServlet.java
 /home/diawara/eclipse-workspace/Maven/gestionCompteBank/src/main/java/sn/objis/gestioncomptebank/presentation/UserServlet.java
 /home/diawara/eclipse-workspace/Maven/gestionCompteBank/src/main/java/sn/objis/gestioncomptebank/domaine/CompteCourant.java
 /home/diawara/eclipse-workspace/Maven/gestionCompteBank/src/main/java/sn/objis/gestioncomptebank/dao/IDaoCompteImpl.java
@@ -39,3 +41,4 @@
 /home/diawara/eclipse-workspace/Maven/gestionCompteBank/src/main/java/sn/objis/gestioncomptebank/presentation/GroupeServlet.java
 /home/diawara/eclipse-workspace/Maven/gestionCompteBank/src/main/java/sn/objis/gestioncomptebank/service/IService.java
 /home/diawara/eclipse-workspace/Maven/gestionCompteBank/src/main/java/sn/objis/gestioncomptebank/service/IServiceClient.java
+/home/diawara/eclipse-workspace/Maven/gestionCompteBank/src/main/java/sn/objis/gestioncomptebank/presentation/CompteServlet.java

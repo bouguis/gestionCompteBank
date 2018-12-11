@@ -75,6 +75,11 @@ public class Employe implements Serializable {
 		super();
 		this.nomEmloye = nomEmloye;
 	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return nomEmloye;
+	}
 	
 	
 	

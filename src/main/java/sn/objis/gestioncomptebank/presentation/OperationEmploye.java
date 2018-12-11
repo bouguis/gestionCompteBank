@@ -1,7 +1,6 @@
 package sn.objis.gestioncomptebank.presentation;
 
 import java.io.IOException;
-import java.util.Date;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -14,23 +13,21 @@ import javax.servlet.http.HttpSession;
 import sn.objis.gestioncomptebank.domaine.Compte;
 import sn.objis.gestioncomptebank.domaine.Employe;
 import sn.objis.gestioncomptebank.domaine.Operation;
-import sn.objis.gestioncomptebank.domaine.Retrait;
-import sn.objis.gestioncomptebank.domaine.Versement;
 import sn.objis.gestioncomptebank.service.IServiceCompteImpl;
 import sn.objis.gestioncomptebank.service.IServiceOperationImpl;
 
 /**
- * Servlet implementation class OpperationServlet
+ * Servlet implementation class OperationEmploye
  */
-public class OperationServlet extends HttpServlet {
+public class OperationEmploye extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private IServiceCompteImpl service = new IServiceCompteImpl();
 	private IServiceOperationImpl serviceOp = new IServiceOperationImpl();
-	
+       
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public OperationServlet() {
+    public OperationEmploye() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -39,8 +36,8 @@ public class OperationServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		RequestDispatcher rd = request.getRequestDispatcher("admin/operationCompte.jsp");
+
+		RequestDispatcher rd = request.getRequestDispatcher("employe/operationEmploye.jsp");
 		rd.forward(request, response);
 	}
 
@@ -48,8 +45,7 @@ public class OperationServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		
+
 		String action = request.getParameter("action");
 		String action1 = request.getParameter("action1");
 		//Recuperation du numero de compte
@@ -78,12 +74,12 @@ public class OperationServlet extends HttpServlet {
 				request.setAttribute("exception", mess);
 				
 			}
-			RequestDispatcher rd = request.getRequestDispatcher("admin/operationCompte.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("employe/operationEmploye.jsp");
 			rd.forward(request, response);
 		}else if (action1!=null) {
-			//HttpSession session = request.getSession();
-			//Employe emp = (Employe) session.getAttribute("user");
-			//long idEmp = emp.getCodeEmploye();
+//			HttpSession session = request.getSession();
+//			Employe emp = (Employe) session.getAttribute("user");
+
 			double montant = Double.parseDouble(request.getParameter("montant"));
 			String cptVire = request.getParameter("compte2");
 			String typeOperation = request.getParameter("op");
@@ -92,16 +88,16 @@ public class OperationServlet extends HttpServlet {
 			
 			if (typeOperation.equalsIgnoreCase("retrait")) {
 				
-				serviceOp.retrait(montant, id,1L  );
+				serviceOp.retrait(montant, id,2L );
 				
 				
 				
 			} else if (typeOperation.equalsIgnoreCase("versement")) {
-				serviceOp.verser(montant, id, 1L);
+				serviceOp.verser(montant, id, 2L);
 			
 				
 			} else if(typeOperation.equalsIgnoreCase("virement")) {
-				serviceOp.virement(montant, id, cptVire, 1L);
+				serviceOp.virement(montant, id, cptVire, 2L);
 			}
 			try {
 				//Consulter compte
@@ -121,7 +117,7 @@ public class OperationServlet extends HttpServlet {
 				request.setAttribute("exception", mess);
 				
 			}
-			RequestDispatcher rd = request.getRequestDispatcher("admin/operationCompte.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("employe/operationEmploye.jsp");
 			rd.forward(request, response);
 		}
 		

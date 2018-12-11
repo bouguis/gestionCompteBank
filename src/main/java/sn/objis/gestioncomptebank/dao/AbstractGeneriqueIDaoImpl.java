@@ -13,7 +13,7 @@ import javax.persistence.criteria.CriteriaQuery;
 
 public abstract class AbstractGeneriqueIDaoImpl <E,P extends Serializable> implements IDao<E, P>{
 	
-	private EntityManagerFactory emf = Persistence.createEntityManagerFactory("bank");
+	protected EntityManagerFactory emf = Persistence.createEntityManagerFactory("bank");
 	protected EntityManager em = emf.createEntityManager();
 	private Class<E> typeEntite;
 	
@@ -33,6 +33,7 @@ public abstract class AbstractGeneriqueIDaoImpl <E,P extends Serializable> imple
 				em.persist(t);
 				//Etape 3 :Validation de la transaction
 				tx.commit();
+				
 				System.out.println("Persistence réuissie !");
 			} catch (Exception e) {
 				
@@ -64,6 +65,7 @@ public abstract class AbstractGeneriqueIDaoImpl <E,P extends Serializable> imple
 
 			//Etape 3 :Validation de la transaction
 			tx.commit();
+			
 			System.out.println("Suppresion réuissie !");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -76,11 +78,16 @@ public abstract class AbstractGeneriqueIDaoImpl <E,P extends Serializable> imple
 	@Override
 	public E getById(P id) {
 		E elementFinded = null;
-		//Etape 1 : ouverture de la transaction
-		EntityTransaction tx = em.getTransaction();
-		tx.begin();
-		elementFinded = em.find(typeEntite, id);
-		tx.commit();
+		try {
+			//Etape 1 : ouverture de la transaction
+			EntityTransaction tx = em.getTransaction();
+			tx.begin();
+			elementFinded = em.find(typeEntite, id);
+			tx.commit();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		return elementFinded;
 	}
@@ -90,6 +97,8 @@ public abstract class AbstractGeneriqueIDaoImpl <E,P extends Serializable> imple
 			List<E> listeElements = null;
 			
 			try {
+				EntityTransaction tx = em.getTransaction();
+				tx.begin();
 				//Etape 1 : Creation d'un Critéri Builder
 				CriteriaBuilder cb = em.getCriteriaBuilder();
 				//Etape 1 : Creation d'un Critéri query
@@ -97,6 +106,7 @@ public abstract class AbstractGeneriqueIDaoImpl <E,P extends Serializable> imple
 				
 				cq.select(cq.from(typeEntite));
 				TypedQuery<E> query = em.createQuery(cq);
+				tx.commit();
 				
 				listeElements = query.getResultList();
 				

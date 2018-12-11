@@ -9,5 +9,5 @@ public interface IServiceOperation extends IService<Operation>{
 	public void verser(double montant, String numCompte, long codeEmp);
 	public void retrait(double montant, String numCompte, long codeEmp);
 	public void virement(double montant, String numCompte1, String numCompte2, long codeEmp);
-
+	public Operation addOperation(Operation op, String numcmpt, long codeEmp);
 }

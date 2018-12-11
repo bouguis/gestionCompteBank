@@ -257,8 +257,8 @@
                         <li class="nav-label"></li>
                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-envelope"></i><span class="hide-menu">Comptes<span class="label label-rouded label-warning pull-right">2</span></span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="compte">Opérations compte</a></li>
-                                <li><a href="operation">Consulter compte</a></li>
+                                <li><a href="compte">Nouvau compte</a></li>
+                                <li><a href="operation">Operations compte</a></li>
                                 
                             </ul>
                         </li>
@@ -287,24 +287,24 @@
                                 
                             </ul>
                         </li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-wpforms"></i><span class="hide-menu">Transactions<span class="label label-rouded label-warning pull-right">1</span></span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="form-basic.html">Opérations sur les Comptes</a></li>
-<!--                                 <li><a href="form-layout.html">Form Layout</a></li> -->
-<!--                                 <li><a href="form-validation.html">Form Validation</a></li> -->
-<!--                                 <li><a href="form-editor.html">Editor</a></li> -->
-<!--                                 <li><a href="form-dropzone.html">Dropzone</a></li> -->
-                            </ul>
-                        </li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-table"></i><span class="hide-menu">Tables</span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="table-bootstrap.html">Basic Tables</a></li>
-                                <li><a href="table-datatable.html">Data Tables</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-label"></li>
+<!--                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-wpforms"></i><span class="hide-menu">Transactions<span class="label label-rouded label-warning pull-right">1</span></span></a> -->
+<!--                             <ul aria-expanded="false" class="collapse"> -->
+<!--                                 <li><a href="form-basic.html">Opérations sur les Comptes</a></li> -->
+<!-- <!--                                 <li><a href="form-layout.html">Form Layout</a></li> --> 
+<!-- <!--                                 <li><a href="form-validation.html">Form Validation</a></li> --> 
+<!-- <!--                                 <li><a href="form-editor.html">Editor</a></li> --> 
+<!-- <!--                                 <li><a href="form-dropzone.html">Dropzone</a></li> --> 
+<!--                             </ul> -->
+<!--                         </li> -->
+<!--                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-table"></i><span class="hide-menu">Tables</span></a> -->
+<!--                             <ul aria-expanded="false" class="collapse"> -->
+<!--                                 <li><a href="table-bootstrap.html">Basic Tables</a></li> -->
+<!--                                 <li><a href="table-datatable.html">Data Tables</a></li> -->
+<!--                             </ul> -->
+<!--                         </li> -->
+<!--                         <li class="nav-label"></li> -->
                         
-                        <li class="nav-label"></li>
+<!--                         <li class="nav-label"></li> -->
                        
                        
                         
@@ -320,7 +320,7 @@
             <!-- Bread crumb -->
             <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
-                    <h3 class="text-primary">Gestion des Comptes</h3>${nom } </div>
+                    <h3 class="text-primary">Gestion des Comptes</h3> ${nom} </div>
                 <div class="col-md-7 align-self-center">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="javascript:void(0)"></a></li>
@@ -341,7 +341,7 @@
                                 </div>
                                 <div class="media-body media-text-right">
                                     <h2 class="color-white"><c:out value="${ NombreEmp }"/></h2>
-                                    <p class="m-b-0">Nombre Employes</p>
+                                    <p class="m-b-0">Employes</p>
                                 </div>
                             </div>
                         </div>
@@ -354,7 +354,7 @@
                                 </div>
                                 <div class="media-body media-text-right">
                                     <h2 class="color-white"><c:out value="${ NombreClient }"/></h2>
-                                    <p class="m-b-0">Nombre Clients</p>
+                                    <p class="m-b-0">Clients</p>
                                 </div>
                             </div>
                         </div>
@@ -367,7 +367,7 @@
                                 </div>
                                 <div class="media-body media-text-right">
                                     <h2 class="color-white"><c:out value="${ NombreGroupe }"/></h2>
-                                    <p class="m-b-0">Nombtre Groupes</p>
+                                    <p class="m-b-0">Groupes</p>
                                 </div>
                             </div>
                         </div>
@@ -379,8 +379,8 @@
                                     <span><i class="ti-location-pin f-s-40"></i></span>
                                 </div>
                                 <div class="media-body media-text-right">
-                                    <h2 class="color-white">278</h2>
-                                    <p class="m-b-0">Total Visitor</p>
+                                    <h2 class="color-white"><c:out value="${ NombreCompte }"/></h2>
+                                    <p class="m-b-0">Comptes</p>
                                 </div>
                             </div>
                         </div>

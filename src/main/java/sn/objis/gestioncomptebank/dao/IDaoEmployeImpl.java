@@ -1,6 +1,5 @@
 package sn.objis.gestioncomptebank.dao;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityTransaction;
@@ -19,13 +18,20 @@ public class IDaoEmployeImpl extends AbstractGeneriqueIDaoImpl<Employe, Long> im
 
 	@Override
 	public List<Employe> employeByGroup(long codeGrp) {
-		List<Employe> listeEmpToGroupe = new ArrayList<>() ;
-		tx.begin();
-		String jpql ="SELECT e FROM Employe e join fetch e.groupes g where g.numGroupe=:x";
-		Query query =em.createQuery(jpql);
-		query.setParameter("x", codeGrp);
-		listeEmpToGroupe =(List<Employe>) query.getResultList();
-		tx.commit();
+		List<Employe> listeEmpToGroupe = null;
+		try {
+			tx.begin();
+			String jpql ="SELECT e FROM Employe e join fetch e.groupes g where g.numGroupe=:x";
+			Query query =em.createQuery(jpql);
+			tx.commit();
+			
+			query.setParameter("x", codeGrp);
+			listeEmpToGroupe = query.getResultList();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		return listeEmpToGroupe ;
 
 	}
@@ -40,6 +46,7 @@ public class IDaoEmployeImpl extends AbstractGeneriqueIDaoImpl<Employe, Long> im
 			e.getGroupes().add(g);
 			g.getEmployes().add(e);
 			tx.commit();
+			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -82,6 +89,7 @@ public class IDaoEmployeImpl extends AbstractGeneriqueIDaoImpl<Employe, Long> im
 			
 			//Etape 3 :Validation de la transaction
 			tx.commit();
+			
 			System.out.println("liste Trouvé !");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

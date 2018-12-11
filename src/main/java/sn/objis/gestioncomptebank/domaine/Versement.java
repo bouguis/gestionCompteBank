@@ -10,7 +10,7 @@ import javax.persistence.*;
  *
  */
 @Entity
-@DiscriminatorValue("v")
+@DiscriminatorValue("V")
 
 public class Versement extends Operation implements Serializable {
 
@@ -24,6 +24,11 @@ public class Versement extends Operation implements Serializable {
 	public Versement(Date dateOperation, double montant) {
 		super(dateOperation, montant);
 		// TODO Auto-generated constructor stub
+	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "Versement";
 	}
    
 	

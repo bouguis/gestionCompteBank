@@ -17,7 +17,7 @@ import sn.objis.gestioncomptebank.service.IServiceGroupImpl;
  */
 public class GroupeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+	IServiceGroupImpl service = new IServiceGroupImpl();
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -30,7 +30,7 @@ public class GroupeServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		IServiceGroupImpl service = new IServiceGroupImpl();
+		
 		request.setAttribute("liste", service.getAll());
 		RequestDispatcher rd = request.getRequestDispatcher("admin/groupe.jsp");
 		rd.forward(request, response);
@@ -42,7 +42,7 @@ public class GroupeServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//Recupération des valeurs saisies
 		String groupe = request.getParameter("groupe");
-		IServiceGroupImpl service = new IServiceGroupImpl();
+		
 		service.add(new Groupe(groupe));
 		request.setAttribute("liste", service.getAll());
 		RequestDispatcher rd = request.getRequestDispatcher("admin/groupe.jsp");

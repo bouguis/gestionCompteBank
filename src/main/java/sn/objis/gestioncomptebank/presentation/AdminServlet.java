@@ -9,7 +9,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import sn.objis.gestioncomptebank.domaine.Employe;
 import sn.objis.gestioncomptebank.service.IServiceClientImpl;
+import sn.objis.gestioncomptebank.service.IServiceCompteImpl;
 import sn.objis.gestioncomptebank.service.IServiceEmployeImpl;
 import sn.objis.gestioncomptebank.service.IServiceGroupImpl;
 
@@ -18,6 +20,10 @@ import sn.objis.gestioncomptebank.service.IServiceGroupImpl;
  */
 public class AdminServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	IServiceEmployeImpl service = new IServiceEmployeImpl();
+	IServiceClientImpl serviceCli = new IServiceClientImpl();
+	IServiceGroupImpl serviceGrp = new IServiceGroupImpl();
+	IServiceCompteImpl serviceCompte = new IServiceCompteImpl();
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -32,14 +38,16 @@ public class AdminServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		IServiceEmployeImpl service = new IServiceEmployeImpl();
-		IServiceClientImpl serviceCli = new IServiceClientImpl();
-		IServiceGroupImpl serviceGrp = new IServiceGroupImpl();
+		
 		
 		
 		request.setAttribute("NombreEmp", service.findAll().size());
 		request.setAttribute("NombreClient", serviceCli.getAll().size());
 		request.setAttribute("NombreGroupe", serviceGrp.getAll().size());
+		request.setAttribute("NombreCompte",serviceCompte.getAll().size() );
+		HttpSession session = request.getSession();
+		Employe emp = (Employe) session.getAttribute("user");
+		request.setAttribute("nom", emp);
 		RequestDispatcher rd = request.getRequestDispatcher("admin/admin.jsp");
 		rd.forward(request, response);
 	}

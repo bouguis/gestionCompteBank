@@ -287,24 +287,24 @@
                                 
                             </ul>
                         </li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-wpforms"></i><span class="hide-menu">Transactions<span class="label label-rouded label-warning pull-right">1</span></span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="form-basic.html">Opérations sur les Comptes</a></li>
-<!--                                 <li><a href="form-layout.html">Form Layout</a></li> -->
-<!--                                 <li><a href="form-validation.html">Form Validation</a></li> -->
-<!--                                 <li><a href="form-editor.html">Editor</a></li> -->
-<!--                                 <li><a href="form-dropzone.html">Dropzone</a></li> -->
-                            </ul>
-                        </li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-table"></i><span class="hide-menu">Tables</span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="table-bootstrap.html">Basic Tables</a></li>
-                                <li><a href="table-datatable.html">Data Tables</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-label"></li>
+<!--                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-wpforms"></i><span class="hide-menu">Transactions<span class="label label-rouded label-warning pull-right">1</span></span></a> -->
+<!--                             <ul aria-expanded="false" class="collapse"> -->
+<!--                                 <li><a href="form-basic.html">Opérations sur les Comptes</a></li> -->
+<!-- <!--                                 <li><a href="form-layout.html">Form Layout</a></li> --> 
+<!-- <!--                                 <li><a href="form-validation.html">Form Validation</a></li> --> 
+<!-- <!--                                 <li><a href="form-editor.html">Editor</a></li> --> 
+<!-- <!--                                 <li><a href="form-dropzone.html">Dropzone</a></li> --> 
+<!--                             </ul> -->
+<!--                         </li> -->
+<!--                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-table"></i><span class="hide-menu">Tables</span></a> -->
+<!--                             <ul aria-expanded="false" class="collapse"> -->
+<!--                                 <li><a href="table-bootstrap.html">Basic Tables</a></li> -->
+<!--                                 <li><a href="table-datatable.html">Data Tables</a></li> -->
+<!--                             </ul> -->
+<!--                         </li> -->
+<!--                         <li class="nav-label"></li> -->
                         
-                        <li class="nav-label"></li>
+<!--                         <li class="nav-label"></li> -->
                        
                        
                         
@@ -434,9 +434,9 @@
                                     <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%" height="30px">
                                         <thead>
                                             <tr>
-                                                
-                                                <th>Date Création</th>
                                                 <th>Numéro Compte</th>
+                                                <th>Type Compte</th>
+                                                <th>Date Création</th>                                           
                                                 <th>Solde</th>
                                                  <th>Action</th>
                                                 
@@ -445,9 +445,9 @@
                                         <tfoot>
                                             <tr>
                                                 
-                                               
-                                                <th>Date Création</th>
                                                 <th>Numéro Compte</th>
+                                                <th>Type Compte</th>
+                                                <th>Date Création</th>                                               
                                                 <th>Solde</th>
                                                 <th>Action</th>
                                                
@@ -458,9 +458,9 @@
                                         
                                             <tr>
                                                 
-                                                 
-                                                <td>${rep.dateCreation }</td>
                                                 <td>${rep.numCompte }</td>
+                                                <td>${rep}</td>
+                                                <td>${rep.dateCreation }</td>                                             
                                                 <td>${rep.solde }</td>
                                                 
                                                 <td><a href="editer?idEdit="><button

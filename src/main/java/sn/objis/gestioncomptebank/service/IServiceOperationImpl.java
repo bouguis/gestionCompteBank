@@ -12,13 +12,13 @@ import sn.objis.gestioncomptebank.domaine.Versement;
 
 public class IServiceOperationImpl implements IServiceOperation{
 	
-	IDaoOperationImpl dao = null;
-	IDaoCompteImpl daoCompte = null;
+	IDaoOperationImpl dao = new IDaoOperationImpl();
+	IDaoCompteImpl daoCompte = new IDaoCompteImpl();
 
 	@Override
 	public Operation add(Operation t) {
 		
-		return null;
+		return dao.add(t);
 	}
 
 	@Override
@@ -70,6 +70,12 @@ public class IServiceOperationImpl implements IServiceOperation{
 		retrait(montant, numCompte1, codeEmp);
 		verser(montant, numCompte2, codeEmp);
 		
+	}
+
+	@Override
+	public Operation addOperation(Operation op, String numcmpt, long codeEmp) {
+		// TODO Auto-generated method stub
+		return dao.addOperation(op, numcmpt, codeEmp);
 	}
 	
 	

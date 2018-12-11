@@ -19,17 +19,10 @@
 		<class>sn.objis.gestioncomptebank.domaine.Versement</class>
 		<class>sn.objis.gestioncomptebank.domaine.Retrait</class>
 		<class>sn.objis.gestioncomptebank.domaine.Groupe</class>
-
 		<properties>
-
 			
-			<property name="hibernate.hbm2ddl.auto" value="update" />
-			
-			<property name="hibernate.show_sql" value="true" />
-
-<!-- 			<property name="hibernate.transaction.jta.platform" -->
-<!-- 				value="org.hibernate.service.jta.platform.internal.JBossAppServerJtaPlatform" /> -->
-			
+			<property name="hibernate.hbm2ddl.auto" value="update"/>
+			<property name="hibernate.show_sql" value="true"/>
 		</properties>
 	</persistence-unit>
 </persistence>

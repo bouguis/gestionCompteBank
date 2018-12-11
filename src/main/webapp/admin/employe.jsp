@@ -287,21 +287,21 @@
                                 
                             </ul>
                         </li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-wpforms"></i><span class="hide-menu">Transactions<span class="label label-rouded label-warning pull-right">1</span></span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="form-basic.html">Opérations sur les Comptes</a></li>
-<!--                                 <li><a href="form-layout.html">Form Layout</a></li> -->
-<!--                                 <li><a href="form-validation.html">Form Validation</a></li> -->
-<!--                                 <li><a href="form-editor.html">Editor</a></li> -->
-<!--                                 <li><a href="form-dropzone.html">Dropzone</a></li> -->
-                            </ul>
-                        </li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-table"></i><span class="hide-menu">Tables</span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="table-bootstrap.html">Basic Tables</a></li>
-                                <li><a href="table-datatable.html">Data Tables</a></li>
-                            </ul>
-                        </li>
+<!--                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-wpforms"></i><span class="hide-menu">Transactions<span class="label label-rouded label-warning pull-right">1</span></span></a> -->
+<!--                             <ul aria-expanded="false" class="collapse"> -->
+<!--                                 <li><a href="form-basic.html">Opérations sur les Comptes</a></li> -->
+<!-- <!--                                 <li><a href="form-layout.html">Form Layout</a></li> --> 
+<!-- <!--                                 <li><a href="form-validation.html">Form Validation</a></li> --> 
+<!-- <!--                                 <li><a href="form-editor.html">Editor</a></li> --> 
+<!-- <!--                                 <li><a href="form-dropzone.html">Dropzone</a></li> --> 
+<!--                             </ul> -->
+<!--                         </li> -->
+<!--                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-table"></i><span class="hide-menu">Tables</span></a> -->
+<!--                             <ul aria-expanded="false" class="collapse"> -->
+<!--                                 <li><a href="table-bootstrap.html">Basic Tables</a></li> -->
+<!--                                 <li><a href="table-datatable.html">Data Tables</a></li> -->
+<!--                             </ul> -->
+<!--                         </li> -->
                         <li class="nav-label"></li>
                         
                         <li class="nav-label"></li>
